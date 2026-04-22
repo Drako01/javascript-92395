@@ -1,1 +1,3 @@
-// console.log("Hola desde el JS App");
+// Defino variables
+let verdadero = true;
+let falso = false;
