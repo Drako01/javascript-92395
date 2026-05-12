@@ -1,255 +1,232 @@
-// Unidad 4: Arrays y Objetos
-
-// const miArrayDeNumeros = [1, 24, 83, 45, 145];
-// // Indices del Array   [0, 1, 2, 3, 4] -> Son los indices
-// console.log(miArrayDeNumeros);
-// console.log(typeof miArrayDeNumeros);
-
-// IMPORTANTE -> Los Arrays se definen usando const NUNCA let
-// miArrayDeNumeros = 5; // -> Se puede reasignar.
-// console.log(miArrayDeNumeros);
-// console.log(typeof miArrayDeNumeros);
-
-// Los Arrays tienen sus propios metodos (funciones).
-
-// Agregar un elemento al final de array
-// miArrayDeNumeros.push(100);
-// miArrayDeNumeros.push(56);
-// miArrayDeNumeros.push(65);
-// miArrayDeNumeros.push(99);
-
-// console.log(miArrayDeNumeros);
-
-// Eliminar el ultimo elemento del Array
-// miArrayDeNumeros.pop(); // -> Saca el ultimo elemento
-// miArrayDeNumeros.pop();
-// miArrayDeNumeros.pop();
-// miArrayDeNumeros.pop();
-
-// console.log(miArrayDeNumeros);
-
-
-// Metodos destructivos -> Modifican los indices del Array
-
-// miArrayDeNumeros.shift(); // -> Elimina el 1er elemento del Array
-// console.log(miArrayDeNumeros);
-// miArrayDeNumeros.unshift(10);
-// console.log(miArrayDeNumeros);
-
-// console.log(miArrayDeNumeros.indexOf(0)); // En que indice se encuentra el Nro 0? -> Cuando no existe ese elemento me muestra -1
-// console.log(miArrayDeNumeros.indexOf(24)); // 1
-// console.log(miArrayDeNumeros.indexOf(145)); // 4
-
-// const miArrayDeNumeros = [1, 24, 83, 45, 145];
-
-// console.log(miArrayDeNumeros);
-
-// console.log("La cantidad de elementos de miArrayDeNumeros es: " + miArrayDeNumeros.length);
-
-// // Imprimir o Acceder a cualquier elemento a partir de su indice
-
-// console.log(miArrayDeNumeros[2]); // Utilizando los [] accedemos a un valor del array segun su indice
-// console.log(miArrayDeNumeros[5]); // Cuando no existe un valor para ese indice me muestra "undefined"
-
-// for (let i = 0; i < miArrayDeNumeros.length; i++) {
-//     console.log("Valor: " + miArrayDeNumeros[i], " para el indice " + i);
-// }
-
-
-// const miArrayDeNumeros = [1, 24, 83, 45, 145];
-
-// console.log(miArrayDeNumeros.join());
-// console.log(miArrayDeNumeros.join(" + "));
-// console.log(miArrayDeNumeros.join(" | "));
-// console.log(miArrayDeNumeros.join(" - "));
-// console.log(miArrayDeNumeros.join(" "));
-
-// console.log(miArrayDeNumeros.join(""));
-// console.log(miArrayDeNumeros.join("palabra"));
-
-// console.log(miArrayDeNumeros.indexOf(1)); // Retorna el indice del elemento
-// console.log(miArrayDeNumeros.includes(1)); // Retorna un boolean si esta o no el elemento
-
-
-// console.log(miArrayDeNumeros.indexOf(1000)); // -1
-// console.log(miArrayDeNumeros.includes(1000)); // false
-
-
-// const miArrayDePalabras = ["Hola", "Mundo", "Coderhouse"];
-// console.log(miArrayDePalabras);
-// // for (let i = 0; i < miArrayDePalabras.length; i++) {
-// //     console.log("Valor: " + miArrayDePalabras[i], " para el indice " + i);
-// // }
-
-// // console.log(miArrayDePalabras.includes("mundo")); // false
-// miArrayDePalabras.sort(); // Ordena alfabeticamente -> Cambia los indices (destructivo)
-// console.log(miArrayDePalabras);
-
-// miArrayDePalabras.sort().reverse(); // Ordena alfabeticamente pero invertido 
-// console.log(miArrayDePalabras);
-
-// -----------------------------------------------------------------
-
-
-// Objetos
-
-/**
- * Formato del Objeto
- * 
- * const nombre = {
- *      clave: valor,
- *      clave: valor,
- *      clave: valor,
- * * }
- */
-
-// const producto = {
+// // Objetos
+// const persona1 = {
 //     id: 1,
-//     nombre: "Azucar",
-//     precio: 1200,
-//     stock: 20
+//     nombre: "Alejandro",
+//     apellido: "Errecart",
+//     edad: 30,
+//     email: "alejandro@mail.com"
 // }
 
-// // console.log(producto);
-// // console.log(typeof producto);
+// // console.log(persona1);
 
-// const productos = [
-//     {
-//         id: 1,
-//         nombre: "Azucar",
-//         precio: 1200,
-//         stock: 20
-//     },
-//     {
-//         id: 2,
-//         nombre: "Yerba",
-//         precio: 1950,
-//         stock: 15
-//     },
-//     {
-//         id: 3,
-//         nombre: "Coca Cola",
-//         precio: 3200,
-//         stock: 25
-//     },
+// const persona2 = {
+//     id: 2,
+//     nombre: "Sol",
+//     apellido: "Orbe",
+//     edad: 20,
+//     email:"sol@mail.com"
+// }
+
+// // console.log(persona2);
+
+// const persona3 = { // Creada como objeto
+//     id: 3,
+//     nombre: "Maria Eugenia",
+//     apellido: "Ortiz",
+//     edad: 21,
+//     email: "maru@mail.com"
+// }
+
+// console.log(persona3);
+
+
+// // Creamos una funcion constructora
+// function Persona(persona) { // Pasamos el objeto literal
+//     this.id = persona.id,
+//     this.nombre = persona.nombre,
+//     this.apellido = persona.apellido,
+//     this.edad = persona.edad,
+//     this.email = persona.email
+// }
+
+// const personaLiteral1 = new Persona(persona3); // La creamos con la funcion Persona
+
+// console.log(personaLiteral1);
+
+// const personaLiteral2 = new Persona( // Paso el objeto completo
 //     {
 //         id: 4,
-//         nombre: "Harina",
-//         precio: 1200,
-//         stock: 120
+//         nombre:"Anthony",
+//         apellido: "Gomez",
+//         edad: 25,
+//         email: "anthony@mail.com"
 //     }
-// ]
+// );
 
-// console.log(productos);
-// console.log(productos.length);
-// console.log(typeof productos);
+// console.log(personaLiteral2);
+// const personaLiteral3 = new Persona(persona1);
 
+// console.log(personaLiteral3);
 
+// Funcion constructora
+// function Persona(id, nombre, apellido, edad, email) { // Paso cada atributo del objeto como parametro
+//         this.id = id,
+//         this.nombre = nombre,
+//         this.apellido = apellido,
+//         this.edad = edad,
+//         this.email = email
+// }
 
-// console.log(productos[0]);
-// console.log(productos[1].id);
-// console.log(productos[1].nombre);
-// console.log(productos[1].precio);
-// console.log(productos[1].stock);
+// // Genramos una persona a partir de una instancia del constructor
+// const persona = new Persona(5, "Franco", "Galluzzo", 30, "franco@mail.com"); 
+// console.log(persona);
 
-// productos.push(
-//     {
-//         id: 5,
-//         nombre: "Chocolate",
-//         precio: 9800,
-//         stock: 10
-//     }
-// )
-// console.log(productos);
-// console.log(productos.length);
+// // Accedemos a los atributos del objeto y reasignamos sus nuevos valores
+// persona.email = "nuevoemaildefranco@mail.com";
+// persona.edad = 28;
+// persona.edad = 38;
 
-// const productoImportado = {
-//     id: 6,
-//     nombre: "Chocolate Importado",
-//     precio: 12900,
-//     stock: 50,
-//     origen: "Italia",
-//     codigo: "CODE123A"
-// };
-// productos.push(productoImportado);
-// productos.push("productoImportado"); // --> Se agrega como string
+// persona['email'] = "otroemaildefranco@mail.com";
+// console.log(persona);
 
 
-// console.log(productos);
-// console.log(productos.length);
+/// Creamos un Gato
+// function Gato(nombre, edad, raza, color, peso) {
+//     this.nombre = nombre,
+//     this.edad = edad,
+//     this.raza = raza,
+//     this.color = color,
+//     this.peso = peso
+// }
 
-// productos.push({
-//     id: 6,
-//     nombre: "Chocolate Suizo",
-//     precio: 18900,
-//     stock: 150,
-//     origen: "Suecia",
-//     codigo: "CODE456A",
-//     sabor: "Amargo"
-// })
+// // Creamos un Perro
+// function Perro(nombre, edad, raza, color, peso){
+//     this.nombre = nombre,
+//     this.edad = edad,
+//     this.raza = raza,
+//     this.color = color,
+//     this.peso = peso
+// }
 
-// console.log(productos);
-// console.log(productos.length);
-
-
-// const carrito = []; // Se define como array vacio
-
-// carrito.push(productos);
-
-// carrito.push(productos[0]);
-// carrito.push(productos[1]);
-// carrito.push(productos[4]);
-
-// carrito.push(productos[2],productos[3],productos[5]);
-// console.log(carrito);
+// const gato = new Gato("Mishi", 4, "Gato", "Blanco", 3.5);
+// console.log(gato);
+// const perro = new Perro("Daisy", 5, "Yorky", "Beige", 3.5);
+// console.log(perro);
 
 
-// Clases --> Siempre empieza en mayuscula
+// La clase permite manejar atributos y metodos
+class Mascota {
+
+    // Atributos -> Que caracteristicas tiene la mascota? (Adjetivos)
+    constructor(tipo, nombre, edad, raza, color, peso) {
+        this.tipo = tipo,
+            this.nombre = nombre,
+            this.edad = edad,
+            this.raza = raza,
+            this.color = color,
+            this.peso = peso
+    }
+
+    // Metodos -> Que puede hacer una mascota? (Verbos)
+
+    comer() {
+        console.log(`Mi ${this.tipo} ${this.nombre} esta comiendo.!`)
+    }
+
+    caminar() {
+        console.log(`Mi ${this.tipo} ${this.nombre} esta caminando.!`)
+    }
+
+}
+
+
+// Una variable se genera y se le asigna un valor pero es Volatil 
+// (significa que solo persiste en Memoria)
+const gatoConClass = new Mascota("Gato", "Mishi", 4, "Gato", "Blanco", 3.5);
+// console.log(gatoConClass);
+
+const perroConClass = new Mascota("Perro", "Daisy", 5, "Yorky", "Beige", 3.5);
+// console.log(perroConClass);
+
+// gatoConClass.comer();
+// perroConClass.comer();
+// gatoConClass.caminar();
+// perroConClass.caminar();
+
+
+// --------------------------------------------------------
+
+// Persistencia -> Almacenamiento
+let mensaje1 = "Hola desde Coder";
+let mensaje2 = "Hola desde LocalStorage";
+
+// Guardamos informacion en Formato String
+localStorage.setItem("Mensaje", mensaje2);
+localStorage.setItem("Numero", 5);
+localStorage.setItem("Boolean", true);
+localStorage.setItem("Numero", 152);
+
+localStorage.setItem("Perro", perroConClass);
+console.log(typeof perroConClass);
+console.log(perroConClass);
+console.log(typeof JSON.stringify(perroConClass)); // String
+console.log(JSON.stringify(perroConClass)); // String
+
+
+localStorage.setItem("Perro", JSON.stringify(perroConClass));
+sessionStorage.setItem("Perro", JSON.stringify(perroConClass));
+
+const perritoLS = localStorage.getItem("Perro");
+
+console.log(perritoLS);
+console.log(typeof perritoLS);
+
+// Parsearlo a formato Objeto
+const perritoParseadoLS = JSON.parse(localStorage.getItem("Perro"));
+console.log(perritoParseadoLS);
+
+console.log(typeof perritoParseadoLS);
+
+localStorage.removeItem("Numero");
+localStorage.removeItem("Boolean");
+localStorage.removeItem("Mensaje");
+
+// localStorage.clear();
+
+const guardarEnLocalStorage = (clave, valor) => {
+    localStorage.setItem(clave, valor);
+}
+
+guardarEnLocalStorage("Clave", "Valor");
+
+guardarEnLocalStorage(gatoConClass.tipo, JSON.stringify(gatoConClass));
+
+localStorage.clear();
+
+
+let carrito = [];
 
 class Producto {
-
-    constructor(id, nombre, precio, stock, origen, codigo, sabor) {
-        this.id = id;
-        this.nombre = nombre;
-        this.precio = precio;
-        this.stock = stock;
-        this.origen = origen;
-        this.codigo = codigo;
-        this.sabor = sabor
+    constructor(nombre, precio, cantidad) {
+        this.nombre = nombre,
+            this.precio = precio,
+            this.cantidad = cantidad
     }
+}
 
-    // Metodos
-    sumarIVA() {
-        this.precio = parseFloat((this.precio * 1.21).toFixed(2));
+const eliminarProductosPorIndice = (indice) => {
+    if (indice >= 0 && indice < carrito.length) {
+        const eliminado = carrito.splice(indice, 1);
+        guardarEnLocalStorage("carrito", JSON.stringify(carrito));
+        console.log(`El Producto ${eliminado[0].nombre} fue eliminado!`);
+    } else {
+        console.error("Indice fuera de rango");
     }
-};
+}
 
-const productosUsandoClases = [];
+const producto1 = new Producto("Azucar", 1850, 100);
+const producto2 = new Producto("Yerba", 2650, 120);
+const producto3 = new Producto("Chocolate", 22500, 60);
 
-// Utilizamos la clase Producto haciendo una instancia para poder usar su Constructor
-const primerProductoUsandoClase = new Producto(1, "Azucar", 1500.15, 20, "Argentina", "COD123A");
+carrito.push(producto1);
+carrito.push(producto2);
+carrito.push(producto3);
+
+console.log(carrito);
+
+eliminarProductosPorIndice(0);
+// eliminarProductosPorIndice(1);
+// eliminarProductosPorIndice(0);
 
 
-productosUsandoClases.push(primerProductoUsandoClase);
-productosUsandoClases.push(new Producto(2, "Yerba", 1800.55, 60, "Argentina", "YER1123")); // Si no agrego la propiedad lo muestra como undefined
-productosUsandoClases.push(new Producto(3, "Harina", 1350.50, 160, "Argentina", "HAR1123"));
-productosUsandoClases.push(new Producto(4, "Chocolate", 18500.99, 20, "Italia", "CHO1123", "Dulce"));
-
-// for (let i = 0; i < productosUsandoClases.length; i++) {
-//     console.log(productosUsandoClases[i])
-// }
-
-// productosUsandoClases.sumarIVA();
-// console.log(productosUsandoClases);
-
-// for (const producto of productosUsandoClases) {
-//     producto.sumarIVA();
-//     console.log(`El producto con ID: ${producto.id} es: ${producto.nombre}. - 
-// El Precio de ${producto.nombre}
-// es $${producto.precio}.- y existen en Stock: ${producto.stock} Und,
-// Origen: ${producto.origen}
-// Codigo: ${producto.codigo}
-// `);
-// }
-
-console.table(productosUsandoClases);
+guardarEnLocalStorage("carrito", JSON.stringify(carrito));
