@@ -1,6 +1,6 @@
 # Ejercicios de Arrays Combinados con Otros Conceptos
 
-#### Arrays y Objetos
+## Arrays y Objetos
 
 1. Crear una lista de objetos que representen personas, con propiedades `nombre` y `edad`.
 2. Añadir un nuevo objeto persona a la lista de personas.
@@ -13,7 +13,7 @@
 9. Verificar si todas las personas en la lista son mayores de edad.
 10. Encontrar la persona más joven en la lista.
 
-#### Arrays y Clases
+## Arrays y Clases
 
 1. Crear una clase `Persona` con propiedades `nombre` y `edad`.
 2. Instanciar un array de objetos `Persona` con diferentes nombres y edades.
@@ -26,7 +26,7 @@
 9. Implementar un método en la clase `Grupo` para devolver el número total de personas en el grupo.
 10. Implementar un método en la clase `Grupo` para ordenar las personas por edad.
 
-#### Arrays y Constructores
+## Arrays y Constructores
 
 1. Crear una clase `Coche` con un constructor que acepte marca, modelo y año.
 2. Instanciar un array de objetos `Coche` con diferentes marcas, modelos y años.
@@ -39,7 +39,7 @@
 9. Implementar un método en la clase `Concesionario` para devolver el número total de coches en el concesionario.
 10. Implementar un método en la clase `Concesionario` para ordenar los coches por año.
 
-#### Arrays y `this`
+## Arrays y `this`
 
 1. Crear una clase `Estudiante` con propiedades `nombre`, `nota1`, `nota2` y `nota3`.
 2. Implementar un método en la clase `Estudiante` que calcule la nota promedio usando `this`.
@@ -52,7 +52,7 @@
 9. Implementar un método en la clase `Curso` para encontrar un estudiante por su nombre.
 10. Implementar un método en la clase `Curso` para devolver todos los estudiantes que aprueban.
 
-#### Arrays y Control de Flujos
+## Arrays y Control de Flujos
 
 1. Crear un array de números y usar un bucle `for` para sumar todos los números.
 2. Crear un array de números y usar un bucle `for` para encontrar el número mayor.

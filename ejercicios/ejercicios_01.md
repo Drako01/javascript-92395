@@ -45,13 +45,19 @@
 1. Pide al usuario que ingrese su nombre y su edad utilizando un `prompt`.
 2. Saluda al usuario utilizando un mensaje de alerta que contenga su nombre y su edad.
 3. Calcula el año de nacimiento del usuario utilizando su edad ingresada y muestra este año en la consola.
-4. Muestra un mensaje de alerta que indique si el usuario es menor de edad o mayor de edad, dependiendo de su edad ingresada.
+4. Muestra un mensaje de alerta que indique si el usuario es menor de edad o mayor de edad, dependiendo de su edad
+   ingresada.
+
 5. Pide al usuario que ingrese dos números utilizando `prompt` y muestra la suma de estos números en una alerta.
-6. Pide al usuario que ingrese su nombre utilizando `prompt` y luego muestra un mensaje en la consola que diga "Hola, [nombre]".
+6. Pide al usuario que ingrese su nombre utilizando `prompt` y luego muestra un mensaje en la consola que diga "Hola,
+   [nombre]".
+
 7. Pide al usuario que ingrese su año de nacimiento y muestra su edad en la consola.
 8. Pide al usuario que ingrese su mes de nacimiento y muestra su signo zodiacal en la consola.
 9. Solicita al usuario que ingrese un número y muestra un mensaje de alerta indicando si el número es par o impar.
-10. Pide al usuario que ingrese su color favorito y muestra un mensaje en la consola que diga "Tu color favorito es [color]".
+10. Pide al usuario que ingrese su color favorito y muestra un mensaje en la consola que diga "Tu color favorito es
+    [color]".
+
 11. Pide al usuario que ingrese su país de residencia y muestra un mensaje de alerta que diga "Vives en [país]".
 12. Pide al usuario que ingrese su código postal y muestra un mensaje en la consola con ese código postal.
 13. Solicita al usuario que ingrese el nombre de su libro favorito y muestra un mensaje de alerta con ese nombre.

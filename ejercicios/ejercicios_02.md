@@ -7,7 +7,8 @@
 
 ## Booleanos
 
-1. Declara una variable llamada `esMayorDeEdad` y asígnale `true` si tienes más de 18 años, o `false` si tienes 18 años o menos.
+1. Declara una variable llamada `esMayorDeEdad` y asígnale `true` si tienes más de 18 años, o `false` si tienes 18 años
+   o menos.
 
 ## Prompt, Alert y Console.log
 
@@ -17,9 +18,14 @@
 
 ## Control de Flujo con if y if else
 
-1. Utilizando un `if`, verifica si un número ingresado por el usuario es positivo, negativo o cero, e imprime un mensaje correspondiente.
-2. Utilizando un `if else`, verifica si un número ingresado por el usuario es par o impar, e imprime un mensaje correspondiente.
-3. Utilizando un `if else`, verifica si un número ingresado por el usuario es mayor que 100, menor que 100 o igual a 100, e imprime un mensaje correspondiente.
+1. Utilizando un `if`, verifica si un número ingresado por el usuario es positivo, negativo o cero, e imprime un mensaje
+   correspondiente.
+
+2. Utilizando un `if else`, verifica si un número ingresado por el usuario es par o impar, e imprime un mensaje
+   correspondiente.
+
+3. Utilizando un `if else`, verifica si un número ingresado por el usuario es mayor que 100, menor que 100 o igual a
+   100, e imprime un mensaje correspondiente.
 
 ## Operadores Lógicos
 
@@ -29,14 +35,29 @@
 
 ## Ejercicios Adicionales
 
-1. Pide al usuario que ingrese un número utilizando `prompt`, luego verifica si es un número primo e imprime un mensaje correspondiente.
-2. Crea una variable llamada `hora` y asígnale un valor numérico que represente una hora del día. Luego, utilizando un `if else`, imprime un mensaje que indique si es mañana, tarde o noche.
-3. Pide al usuario que ingrese dos números utilizando `prompt`, luego verifica si el primero es divisible por el segundo e imprime un mensaje correspondiente.
-4. Crea una variable llamada `nombreUsuario` y asígnale un nombre. Luego, verifica si el nombre tiene más de 6 caracteres e imprime un mensaje correspondiente.
-5. Utilizando un `if else`, verifica si un año ingresado por el usuario es bisiesto o no, e imprime un mensaje correspondiente.
-6. Pide al usuario que ingrese su nombre utilizando `prompt`, luego verifica si comienza con la letra "A" o "a" e imprime un mensaje correspondiente.
-7. Declara una variable llamada `temperatura` y asígnale un valor numérico que represente la temperatura actual. Luego, utilizando un `if`, imprime un mensaje que indique si hace frío, templado o caliente.
-8. Pide al usuario que ingrese tres números utilizando `prompt`, luego verifica si la suma de los dos primeros números es igual al tercer número e imprime un mensaje correspondiente.
+1. Pide al usuario que ingrese un número utilizando `prompt`, luego verifica si es un número primo e imprime un mensaje
+   correspondiente.
+
+2. Crea una variable llamada `hora` y asígnale un valor numérico que represente una hora del día. Luego, utilizando un
+   `if else`, imprime un mensaje que indique si es mañana, tarde o noche.
+
+3. Pide al usuario que ingrese dos números utilizando `prompt`, luego verifica si el primero es divisible por el segundo
+   e imprime un mensaje correspondiente.
+
+4. Crea una variable llamada `nombreUsuario` y asígnale un nombre. Luego, verifica si el nombre tiene más de 6
+   caracteres e imprime un mensaje correspondiente.
+
+5. Utilizando un `if else`, verifica si un año ingresado por el usuario es bisiesto o no, e imprime un mensaje
+   correspondiente.
+
+6. Pide al usuario que ingrese su nombre utilizando `prompt`, luego verifica si comienza con la letra "A" o "a" e
+   imprime un mensaje correspondiente.
+
+7. Declara una variable llamada `temperatura` y asígnale un valor numérico que represente la temperatura actual. Luego,
+   utilizando un `if`, imprime un mensaje que indique si hace frío, templado o caliente.
+
+8. Pide al usuario que ingrese tres números utilizando `prompt`, luego verifica si la suma de los dos primeros números
+   es igual al tercer número e imprime un mensaje correspondiente.
 
 ---
 

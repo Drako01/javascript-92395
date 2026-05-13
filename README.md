@@ -18,7 +18,8 @@
 
 Este repositorio acompana el recorrido de la **Comision 92395** de **JavaScript** en **CoderHouse**.
 
-La idea es centralizar practicas, desafios, entregas y el proyecto final, aplicando de forma progresiva los contenidos fundamentales del curso.
+La idea es centralizar practicas, desafios, entregas y el proyecto final, aplicando de forma progresiva los contenidos
+fundamentales del curso.
 
 ---
 
@@ -121,12 +122,14 @@ Alejandro Daniel Di Stefano
 
 ## Estado de la cursada
 
-> En construccion. Este repositorio ira creciendo clase a clase con ejercicios, desafios y entregas de la comision **92395**.
+> En construccion. Este repositorio ira creciendo clase a clase con ejercicios, desafios y entregas de la comision
+> **92395**.
 
 ---
 
 ## Mensaje final
 
-Aprender JavaScript no es solo memorizar sintaxis: es desarrollar criterio para resolver problemas, modelar ideas en codigo y construir experiencias interactivas reales en la web.
+Aprender JavaScript no es solo memorizar sintaxis: es desarrollar criterio para resolver problemas, modelar ideas en
+codigo y construir experiencias interactivas reales en la web.
 
 **Comision 92395**: a programar, practicar y llevar el proyecto final a un nivel profesional.
