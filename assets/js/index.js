@@ -1,232 +1,242 @@
-// // Objetos
-// const persona1 = {
-//     id: 1,
-//     nombre: "Alejandro",
-//     apellido: "Errecart",
-//     edad: 30,
-//     email: "alejandro@mail.com"
+// Clase 06
+
+// Funciones de Orden Superior
+
+// function operarNumeros(a, b, operacion) {
+//     return operacion(a, b);
 // }
 
-// // console.log(persona1);
+// const operarNumeros = (a, b, operacion) => operacion(a, b);
 
-// const persona2 = {
-//     id: 2,
-//     nombre: "Sol",
-//     apellido: "Orbe",
-//     edad: 20,
-//     email:"sol@mail.com"
-// }
-
-// // console.log(persona2);
-
-// const persona3 = { // Creada como objeto
-//     id: 3,
-//     nombre: "Maria Eugenia",
-//     apellido: "Ortiz",
-//     edad: 21,
-//     email: "maru@mail.com"
-// }
-
-// console.log(persona3);
-
-
-// // Creamos una funcion constructora
-// function Persona(persona) { // Pasamos el objeto literal
-//     this.id = persona.id,
-//     this.nombre = persona.nombre,
-//     this.apellido = persona.apellido,
-//     this.edad = persona.edad,
-//     this.email = persona.email
-// }
-
-// const personaLiteral1 = new Persona(persona3); // La creamos con la funcion Persona
-
-// console.log(personaLiteral1);
-
-// const personaLiteral2 = new Persona( // Paso el objeto completo
-//     {
-//         id: 4,
-//         nombre:"Anthony",
-//         apellido: "Gomez",
-//         edad: 25,
-//         email: "anthony@mail.com"
+// // Definamos operaciones
+// const suma = (x, y) => x + y;
+// const resta = (x, y) => x - y;
+// const multiplicacion = (x, y) => x * y;
+// const division = (x, y) => {
+//     if(y === 0){
+//         return "Error, no se puede dividir por Cero!"
 //     }
-// );
+//     return x / y;
+// };
 
-// console.log(personaLiteral2);
-// const personaLiteral3 = new Persona(persona1);
-
-// console.log(personaLiteral3);
-
-// Funcion constructora
-// function Persona(id, nombre, apellido, edad, email) { // Paso cada atributo del objeto como parametro
-//         this.id = id,
-//         this.nombre = nombre,
-//         this.apellido = apellido,
-//         this.edad = edad,
-//         this.email = email
-// }
-
-// // Genramos una persona a partir de una instancia del constructor
-// const persona = new Persona(5, "Franco", "Galluzzo", 30, "franco@mail.com"); 
-// console.log(persona);
-
-// // Accedemos a los atributos del objeto y reasignamos sus nuevos valores
-// persona.email = "nuevoemaildefranco@mail.com";
-// persona.edad = 28;
-// persona.edad = 38;
-
-// persona['email'] = "otroemaildefranco@mail.com";
-// console.log(persona);
+// console.log(operarNumeros(5, 10, suma));
+// console.log(operarNumeros(125, 150, resta));
+// console.log(operarNumeros(53, 104, multiplicacion));
+// console.log(operarNumeros(54, 110, division));
+// console.log(operarNumeros(54, 0, division));
 
 
-/// Creamos un Gato
-// function Gato(nombre, edad, raza, color, peso) {
-//     this.nombre = nombre,
-//     this.edad = edad,
-//     this.raza = raza,
-//     this.color = color,
-//     this.peso = peso
-// }
+// Arrays
 
-// // Creamos un Perro
-// function Perro(nombre, edad, raza, color, peso){
-//     this.nombre = nombre,
-//     this.edad = edad,
-//     this.raza = raza,
-//     this.color = color,
-//     this.peso = peso
-// }
+// const myArray = [1, 2, 3]; 
+// console.log(typeof myArray)
 
-// const gato = new Gato("Mishi", 4, "Gato", "Blanco", 3.5);
-// console.log(gato);
-// const perro = new Perro("Daisy", 5, "Yorky", "Beige", 3.5);
-// console.log(perro);
+// // myArray = 4; 
+
+// myArray.push(4);
+// console.log(myArray);
+// console.log(myArray[0]);
+// console.log(myArray[1]);
+
+// console.log(myArray.length); // Gallina Tiene Huevo
 
 
-// La clase permite manejar atributos y metodos
-class Mascota {
+// const arrayString = ["Hola", "Mundo"];
 
-    // Atributos -> Que caracteristicas tiene la mascota? (Adjetivos)
-    constructor(tipo, nombre, edad, raza, color, peso) {
-        this.tipo = tipo,
-            this.nombre = nombre,
-            this.edad = edad,
-            this.raza = raza,
-            this.color = color,
-            this.peso = peso
-    }
+// arrayString.push("Coder");
+// arrayString.push("JavaScript");
 
-    // Metodos -> Que puede hacer una mascota? (Verbos)
-
-    comer() {
-        console.log(`Mi ${this.tipo} ${this.nombre} esta comiendo.!`)
-    }
-
-    caminar() {
-        console.log(`Mi ${this.tipo} ${this.nombre} esta caminando.!`)
-    }
-
-}
+// console.log(arrayString);
+// console.log(arrayString.sort());
 
 
-// Una variable se genera y se le asigna un valor pero es Volatil 
-// (significa que solo persiste en Memoria)
-const gatoConClass = new Mascota("Gato", "Mishi", 4, "Gato", "Blanco", 3.5);
-// console.log(gatoConClass);
+// const myArray = [1, 2, 3, -52, 99, 234, -234, 2643, 0, 100, 1, 100, 65, -98, -900, 5, 2];
+// console.log(myArray);
 
-const perroConClass = new Mascota("Perro", "Daisy", 5, "Yorky", "Beige", 3.5);
-// console.log(perroConClass);
+// myArray.forEach((num) => {
+//     console.log("Imprimiendo el número: " + num);
+// })
 
-// gatoConClass.comer();
-// perroConClass.comer();
-// gatoConClass.caminar();
-// perroConClass.caminar();
+// myArray.forEach((num, index) => {
+//     console.log(`Imprimiendo el número: ${num} con su indice ${index}`);
+// })
 
+// Obtenemos un nuevo Array que cumple con una condicion dada.
+// myArray.forEach((num, index, array) => {
+//     array[index] = num * 3;
+// })
 
-// --------------------------------------------------------
-
-// Persistencia -> Almacenamiento
-let mensaje1 = "Hola desde Coder";
-let mensaje2 = "Hola desde LocalStorage";
-
-// Guardamos informacion en Formato String
-localStorage.setItem("Mensaje", mensaje2);
-localStorage.setItem("Numero", 5);
-localStorage.setItem("Boolean", true);
-localStorage.setItem("Numero", 152);
-
-localStorage.setItem("Perro", perroConClass);
-console.log(typeof perroConClass);
-console.log(perroConClass);
-console.log(typeof JSON.stringify(perroConClass)); // String
-console.log(JSON.stringify(perroConClass)); // String
+// console.log(myArray);
 
 
-localStorage.setItem("Perro", JSON.stringify(perroConClass));
-sessionStorage.setItem("Perro", JSON.stringify(perroConClass));
+// const arrayString = ["Hola", "Mundo", "Coder"];
 
-const perritoLS = localStorage.getItem("Perro");
-
-console.log(perritoLS);
-console.log(typeof perritoLS);
-
-// Parsearlo a formato Objeto
-const perritoParseadoLS = JSON.parse(localStorage.getItem("Perro"));
-console.log(perritoParseadoLS);
-
-console.log(typeof perritoParseadoLS);
-
-localStorage.removeItem("Numero");
-localStorage.removeItem("Boolean");
-localStorage.removeItem("Mensaje");
-
-// localStorage.clear();
-
-const guardarEnLocalStorage = (clave, valor) => {
-    localStorage.setItem(clave, valor);
-}
-
-guardarEnLocalStorage("Clave", "Valor");
-
-guardarEnLocalStorage(gatoConClass.tipo, JSON.stringify(gatoConClass));
-
-localStorage.clear();
+// console.log(arrayString);
 
 
-let carrito = [];
+// const inventario = {} // Creamos un Objeto vacio
 
-class Producto {
-    constructor(nombre, precio, cantidad) {
-        this.nombre = nombre,
-            this.precio = precio,
-            this.cantidad = cantidad
-    }
-}
+// // console.log(inventario['id'] = 5656)
 
-const eliminarProductosPorIndice = (indice) => {
-    if (indice >= 0 && indice < carrito.length) {
-        const eliminado = carrito.splice(indice, 1);
-        guardarEnLocalStorage("carrito", JSON.stringify(carrito));
-        console.log(`El Producto ${eliminado[0].nombre} fue eliminado!`);
-    } else {
-        console.error("Indice fuera de rango");
-    }
-}
+// arrayString.forEach((palabra, indice) => {
+//     inventario[indice] = palabra
+// })
 
-const producto1 = new Producto("Azucar", 1850, 100);
-const producto2 = new Producto("Yerba", 2650, 120);
-const producto3 = new Producto("Chocolate", 22500, 60);
+// console.log(inventario)
 
-carrito.push(producto1);
-carrito.push(producto2);
-carrito.push(producto3);
+// Filter
 
-console.log(carrito);
+// const cursos = [
+//     { nombre: "JavaScript", precio: 180000 },
+//     { nombre: "React", precio: 160000 },
+//     { nombre: "Angular", precio: 190000 },
+//     { nombre: "SQL", precio: 110000 },
+//     { nombre: "Backend", precio: 360000 }
+// ];
 
-eliminarProductosPorIndice(0);
-// eliminarProductosPorIndice(1);
-// eliminarProductosPorIndice(0);
+// console.log(cursos);
+
+// // Como usar filter:
+
+// const cursosEconomicos = cursos.filter((curso) => curso.precio <= 180000);
+// console.log(cursosEconomicos);
+
+// const cursosCaros = cursos.filter((curso) => curso.precio > 180000);
+// console.log(cursosCaros);
 
 
-guardarEnLocalStorage("carrito", JSON.stringify(carrito));
+// const myArray = [1, 2, 3, -52, 99, 234, -234, 2643, 0, 100, 1, 100, 65, -98, -900, 5, 2];
+// console.log(myArray);
+
+// const myArrayFiltrado = myArray.filter((num) => num > 100);
+// console.log(myArrayFiltrado);
+
+
+// Map
+
+// const frutas = ["Banana", "Pera", "Manzana", "Limon"];
+// console.log(frutas);
+// const frutasConMayusculas = frutas.map((fruta) => fruta.toUpperCase());
+// console.log(frutasConMayusculas);
+
+// const myArray = [1, 2, 53, -900, 5, 2];
+
+// const myArrayDobles = myArray.map((num) => num * 2);
+
+// console.log(myArrayDobles);
+
+
+// const cursos = [
+//     { nombre: "JavaScript", precio: 180000 },
+//     { nombre: "React", precio: 160000 },
+//     { nombre: "Angular", precio: 190000 },
+//     { nombre: "SQL", precio: 110000 },
+//     { nombre: "Backend", precio: 360000 }
+// ];
+
+// console.log(cursos);
+
+// const arrayNombreDeCursos = cursos.map((curso) => curso.nombre);
+
+// console.log(arrayNombreDeCursos);
+
+// const arrayPreciosDeCursos = cursos.map((curso) => curso.precio);
+// console.log(arrayPreciosDeCursos);
+
+// const booleanos = [true, false, false, true, true, true, false, true];
+// console.log(booleanos);
+
+// const booleanosToText = booleanos.map((valor) => {
+//     if(valor){
+//         return "✅ Verdadero"
+//     } else {
+//         return "❌ Falso"
+//     }
+// })
+
+// const booleanosToText = booleanos.map((valor) => {
+//     if (valor) {
+//         return "✅ Verdadero"
+//     }
+//     return "❌ Falso";
+// });
+
+// console.log(booleanosToText);
+
+
+// const productos = [
+//     {id: 1, nombre: "Azucar", precio: 1800, disponible: true},
+//     {id: 2, nombre: "Yerba", precio: 2560, disponible: false},
+//     {id: 3, nombre: "Coca Cola", precio: 3600, disponible: true},
+//     {id: 4, nombre: "Pepsi", precio: 3200, disponible: false},
+//     {id: 5, nombre: "Chocolate", precio: 18000, disponible: true},
+// ];
+
+// const stock = productos.map((producto) => {
+//     let disponibilidad = "";
+//     if(producto.disponible){
+//         disponibilidad = "Tiene Stock"
+//     } else {
+//         disponibilidad = "No tiene Stock"
+//     }
+
+//     return `El Producto ${producto.nombre} ${disponibilidad} - Precio: $${producto.precio}.-`
+// });
+
+// console.log(stock);
+
+// Reduce
+// const myArray = [1, 2, 3, -52, 990, 234, 5, -98, -900, 5, 2];
+
+// const sumaDeTodosLosNumerosDeMyArray = myArray.reduce((acumulador, numero) => acumulador + numero, 0);
+
+// console.log(sumaDeTodosLosNumerosDeMyArray);
+
+
+// const cursos = [
+//     { nombre: "JavaScript", precio: 180000 },
+//     { nombre: "React", precio: 160000 },
+//     { nombre: "Angular", precio: 190000 },
+//     { nombre: "SQL", precio: 110000 },
+//     { nombre: "Backend", precio: 360000 }
+// ];
+
+// const cursoObjeto = cursos.reduce((acc, curso) => {
+//     acc[curso.nombre] = curso.precio
+//     return acc
+// }, {});
+
+// console.log(cursoObjeto);
+
+
+// const frutas = ["Banana", "Banana", "Banana", "Pera", "Manzana", "Limon", "Kiwi", "Mandarina", "Pera", "Manzana", "Limon", "Pera"];
+
+// const frutasObjeto = frutas.reduce((acc, fruta) => {
+//     acc[fruta] = (acc[fruta] || 0) + 1
+//     return acc
+// }, {})
+
+// console.log(frutasObjeto);
+
+// Find
+const productos = [
+    {id: 1, nombre: "Azucar", precio: 1800, disponible: true},
+    {id: 2, nombre: "Yerba", precio: 2560, disponible: false},
+    {id: 3, nombre: "Coca Cola", precio: 3600, disponible: true},
+    {id: 4, nombre: "Pepsi", precio: 3200, disponible: false},
+    {id: 5, nombre: "Chocolate", precio: 18000, disponible: true},
+];
+
+const productoBuscado = productos.find((prod) => prod.id === 3);
+console.log(productoBuscado);
+
+const productoBuscadoPorNombre = productos.find((prod) => prod.nombre.toLowerCase() === "pepsi");
+console.log(productoBuscadoPorNombre);
+
+const productoBuscadoPorDisponibilidad = productos.find((prod) => prod.disponible === true);
+console.log(productoBuscadoPorDisponibilidad);
+
+
+// Some
+const hayDisponibilidad = productos.some((prod) => prod.nombre.toLowerCase() === "pepsi");
+console.log(hayDisponibilidad);

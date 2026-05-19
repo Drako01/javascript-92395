@@ -1,239 +1,394 @@
-# Ejercicios muy básicos de objetos
+# Ejercicios usando funciones de orden superior
 
-## Objetos literales
+Resolver los ejercicios usando funciones flecha y métodos de array cuando corresponda.
 
-1. Crear un objeto llamado `persona` con las propiedades `nombre`, `apellido`, `edad` y `email`.
-2. Mostrar en consola el objeto `persona` completo.
-3. Mostrar en consola solamente el `nombre` de la persona.
-4. Mostrar en consola solamente el `email` de la persona.
-5. Cambiar la edad de la persona por otro número.
-6. Cambiar el email de la persona usando la notación con punto.
-7. Cambiar el apellido de la persona usando la notación con corchetes.
-8. Agregar una propiedad nueva llamada `telefono`.
-9. Mostrar en consola el objeto actualizado.
-10. Crear otro objeto llamado `persona2` con las mismas propiedades, pero con otros datos.
+## Funciones como parámetros
 
-## Funciones constructoras
+1. Crear una función `operarNumeros(a, b, operacion)` que reciba dos números y una función. Luego crear
+   las funciones `suma`, `resta`, `multiplicacion` y `division`, y probarlas usando `operarNumeros`.
 
-1. Crear una función constructora llamada `Persona` que reciba `id`, `nombre`, `apellido`, `edad` y `email`.
-2. Crear una persona nueva usando `new Persona(...)`.
-3. Mostrar en consola la persona creada.
-4. Crear dos personas más usando la misma función constructora.
-5. Cambiar el email de una de las personas creadas.
-6. Cambiar la edad de otra persona creada.
-7. Mostrar en consola las tres personas.
-8. Crear una función constructora llamada `Producto` que reciba `nombre`, `precio` y `cantidad`.
-9. Crear un producto usando `new Producto(...)`.
-10. Mostrar en consola el producto creado.
+2. Modificar la función `division` para que devuelva el texto `"Error, no se puede dividir por cero"` cuando
+   el segundo número sea `0`.
 
-## Clases
+3. Crear una función `mostrarResultado(valor, callback)` que reciba un valor y una función. La función debe
+   ejecutar el callback pasándole ese valor.
 
-1. Crear una clase llamada `Mascota`.
-2. Agregar un `constructor` que reciba `tipo`, `nombre`, `edad`, `raza`, `color` y `peso`.
-3. Dentro del constructor, guardar cada dato usando `this`.
-4. Crear una mascota llamada `gato` usando `new Mascota(...)`.
-5. Crear una mascota llamada `perro` usando `new Mascota(...)`.
-6. Mostrar en consola las dos mascotas.
-7. Cambiar el peso del gato.
-8. Cambiar el color del perro.
-9. Mostrar en consola el nombre del gato.
-10. Mostrar en consola el tipo del perro.
+4. Crear una función `aplicarDescuento(precio, descuento)` que reciba un precio y una función que calcule el
+   descuento. Probarla con una función que aplique un 10% de descuento.
 
-## Métodos
+## `forEach`
 
-1. Agregar a la clase `Mascota` un método llamado `comer`.
-2. El método `comer` debe mostrar en consola un mensaje usando `this.tipo` y `this.nombre`.
-3. Agregar a la clase `Mascota` un método llamado `caminar`.
-4. El método `caminar` debe mostrar en consola un mensaje usando `this.tipo` y `this.nombre`.
-5. Ejecutar el método `comer` del gato.
-6. Ejecutar el método `comer` del perro.
-7. Ejecutar el método `caminar` del gato.
-8. Ejecutar el método `caminar` del perro.
-9. Crear otra mascota y ejecutar sus dos métodos.
-10. Mostrar en consola el objeto de esa nueva mascota.
+1. Usar `forEach` para imprimir cada elemento de un array de números.
 
-## JSON y almacenamiento
+2. Usar `forEach` para imprimir cada número junto con su índice.
 
-1. Crear un objeto llamado `producto` con las propiedades `nombre`, `precio` y `cantidad`.
-2. Convertir el objeto `producto` a texto usando `JSON.stringify`.
-3. Mostrar en consola el resultado de `JSON.stringify`.
-4. Mostrar en consola el tipo de dato del resultado usando `typeof`.
-5. Guardar el producto convertido en texto dentro de `localStorage`.
-6. Leer el producto desde `localStorage` usando `getItem`.
-7. Mostrar en consola el producto leído desde `localStorage`.
-8. Convertir el producto leído a objeto usando `JSON.parse`.
-9. Mostrar en consola el producto parseado.
-10. Mostrar en consola el tipo de dato del producto parseado usando `typeof`.
+3. Usar `forEach` para imprimir todos los días de la semana.
 
-## Carrito simple
+4. Usar `forEach` para imprimir la tabla de multiplicar del número `5`.
 
-1. Crear un array vacío llamado `carrito`.
-2. Crear una clase llamada `Producto` con `nombre`, `precio` y `cantidad`.
-3. Crear tres productos usando `new Producto(...)`.
-4. Agregar los tres productos al array `carrito` usando `push`.
-5. Mostrar en consola el carrito completo.
-6. Mostrar en consola el primer producto del carrito.
-7. Eliminar el primer producto del carrito usando `splice`.
-8. Mostrar en consola el carrito actualizado.
-9. Guardar el carrito en `localStorage` usando `JSON.stringify`.
-10. Leer el carrito desde `localStorage` y convertirlo nuevamente a array usando `JSON.parse`.
+5. Dado el array `["Hola", "Mundo", "Coder"]`, crear un objeto vacío llamado `inventario` y guardar cada
+   palabra usando su índice como clave.
 
-## Más objetos literales
+6. Dado un array de números, usar `forEach` para contar cuántos números son mayores a `100`.
 
-1. Crear un objeto llamado `auto` con las propiedades `marca`, `modelo`, `anio` y `color`.
-2. Mostrar en consola la marca del auto.
-3. Mostrar en consola el modelo del auto usando notación con corchetes.
-4. Cambiar el color del auto.
-5. Agregar una propiedad llamada `patente`.
-6. Mostrar en consola el objeto `auto` actualizado.
-7. Crear un objeto llamado `libro` con `titulo`, `autor`, `paginas` y `leido`.
-8. Cambiar la propiedad `leido` de `false` a `true`.
-9. Mostrar en consola un mensaje usando el título y el autor del libro.
-10. Crear un objeto llamado `pelicula` con `titulo`, `genero`, `duracion` y `aptaTodoPublico`.
+## `filter`
 
-## Acceso y modificación de propiedades
+1. Dado un array de números, obtener un nuevo array con los números mayores a `100`.
 
-1. Crear un objeto llamado `usuario` con `nombre`, `email` y `activo`.
-2. Mostrar en consola el valor de `activo`.
-3. Cambiar `activo` a `false`.
-4. Agregar una propiedad llamada `rol` con el valor `"estudiante"`.
-5. Mostrar en consola el valor de `rol`.
-6. Crear una variable llamada `propiedad` con el valor `"email"`.
-7. Usar la variable `propiedad` para mostrar el email del usuario con corchetes.
-8. Cambiar el email del usuario usando la variable `propiedad`.
-9. Mostrar en consola el usuario completo.
-10. Crear otro usuario con los mismos campos y otros valores.
+2. Dado un array de números, obtener un nuevo array con los números pares.
 
-## Objetos con métodos simples
+3. Dado un array de números positivos y negativos, obtener un nuevo array que tenga solamente los números
+   negativos.
 
-1. Crear un objeto llamado `calculadora` con las propiedades `numero1` y `numero2`.
-2. Agregar un método llamado `sumar` que muestre la suma de los dos números.
-3. Agregar un método llamado `restar` que muestre la resta de los dos números.
-4. Ejecutar los métodos `sumar` y `restar`.
-5. Crear un objeto llamado `producto` con `nombre`, `precio` y `stock`.
-6. Agregar un método llamado `mostrarInfo` que muestre el nombre y el precio.
-7. Agregar un método llamado `hayStock` que muestre si el stock es mayor que cero.
-8. Ejecutar los métodos del producto.
-9. Cambiar el stock del producto a `0`.
-10. Ejecutar nuevamente el método `hayStock`.
+4. Dado el siguiente array, obtener los cursos que cuestan `180000` o menos:
 
-## Constructores con objetos
+   ```js
+   const cursos = [
+       { nombre: "JavaScript", precio: 180000 },
+       { nombre: "React", precio: 160000 },
+       { nombre: "Angular", precio: 190000 },
+       { nombre: "SQL", precio: 110000 },
+       { nombre: "Backend", precio: 360000 },
+   ];
+   ```
 
-1. Crear una función constructora llamada `Alumno` que reciba un objeto como parámetro.
-2. Guardar en `this` las propiedades `nombre`, `apellido`, `edad` y `curso`.
-3. Crear un objeto literal con los datos de un alumno.
-4. Crear una instancia usando `new Alumno(objetoAlumno)`.
-5. Mostrar en consola la instancia creada.
-6. Crear otra instancia pasando directamente el objeto dentro de `new Alumno(...)`.
-7. Cambiar el curso de una de las instancias.
-8. Mostrar en consola el nombre completo de un alumno.
-9. Crear una función constructora llamada `Mascota` que reciba un objeto como parámetro.
-10. Crear una mascota usando esa función constructora.
+5. Con el mismo array de cursos, obtener los cursos que cuestan más de `180000`.
 
-## Clases de productos
+6. Dado un array de productos con `nombre`, `precio` y `disponible`, obtener solo los productos disponibles.
 
-1. Crear una clase llamada `Producto`.
-2. Agregar un constructor que reciba `nombre`, `precio` y `cantidad`.
-3. Crear un producto llamado `azucar`.
-4. Crear un producto llamado `yerba`.
-5. Crear un producto llamado `chocolate`.
-6. Mostrar en consola los tres productos.
-7. Agregar un método llamado `mostrarNombre` que muestre el nombre del producto.
-8. Agregar un método llamado `mostrarPrecio` que muestre el precio del producto.
-9. Ejecutar ambos métodos en uno de los productos.
-10. Cambiar la cantidad de uno de los productos.
+## `map`
 
-## Métodos con mensajes
+1. Usar `map` para duplicar cada número de un array.
 
-1. Crear una clase llamada `Persona`.
-2. El constructor debe recibir `nombre`, `apellido` y `edad`.
-3. Agregar un método llamado `saludar` que muestre un saludo con el nombre.
-4. Agregar un método llamado `presentarse` que muestre nombre, apellido y edad.
-5. Crear dos personas usando `new Persona(...)`.
-6. Ejecutar el método `saludar` en las dos personas.
-7. Ejecutar el método `presentarse` en las dos personas.
-8. Cambiar la edad de una persona.
-9. Ejecutar nuevamente `presentarse`.
-10. Mostrar en consola las dos personas completas.
+2. Usar `map` para convertir un array de frutas a mayúsculas.
 
-## Arrays de objetos básicos
+3. Dado un array de cursos, crear un nuevo array que tenga solamente los nombres de los cursos.
 
-1. Crear un array llamado `personas` con tres objetos literales.
-2. Cada persona debe tener `nombre`, `edad` y `email`.
-3. Mostrar en consola el array completo.
-4. Mostrar en consola la primera persona del array.
-5. Mostrar en consola el nombre de la segunda persona.
-6. Agregar una cuarta persona usando `push`.
-7. Mostrar en consola el largo del array.
-8. Cambiar el email de la tercera persona.
-9. Eliminar la primera persona usando `shift`.
-10. Mostrar en consola el array actualizado.
+4. Dado un array de cursos, crear un nuevo array que tenga solamente los precios.
 
-## Carrito con más operaciones
+5. Dado el array `[true, false, false, true]`, crear un nuevo array que diga `"Verdadero"` o `"Falso"` según
+   cada valor.
 
-1. Crear un carrito vacío.
-2. Crear tres productos con `nombre`, `precio` y `cantidad`.
-3. Agregar los productos al carrito.
-4. Mostrar en consola cuántos productos hay en el carrito.
-5. Cambiar la cantidad del segundo producto.
-6. Eliminar el último producto usando `pop`.
-7. Agregar un producto nuevo usando `push`.
-8. Mostrar en consola el nombre de cada producto usando un `for`.
-9. Guardar el carrito en `localStorage`.
-10. Leer el carrito desde `localStorage` y mostrarlo en consola.
+6. Dado un array de productos con `nombre`, `precio` y `disponible`, crear un nuevo array de textos con el
+   formato: `"El producto Yerba tiene stock - Precio: $2560"`.
 
-## JSON práctica extra
+7. Dado un array de precios, crear un nuevo array con un aumento del 20%.
 
-1. Crear un objeto llamado `usuario` con `nombre`, `email` y `edad`.
-2. Convertir el usuario a texto usando `JSON.stringify`.
-3. Guardar el texto en una variable llamada `usuarioTexto`.
-4. Mostrar en consola `usuarioTexto`.
-5. Convertir `usuarioTexto` nuevamente a objeto usando `JSON.parse`.
-6. Guardar el resultado en una variable llamada `usuarioObjeto`.
-7. Mostrar en consola `usuarioObjeto`.
-8. Cambiar la edad de `usuarioObjeto`.
-9. Guardar `usuarioObjeto` en `localStorage`.
-10. Eliminar ese dato de `localStorage` usando `removeItem`.
+## `reduce`
 
-## SessionStorage
+1. Usar `reduce` para obtener la suma total de un array de números.
 
-1. Crear un objeto llamado `preferencias` con `tema`, `idioma` y `notificaciones`.
-2. Convertir el objeto a texto usando `JSON.stringify`.
-3. Guardar el objeto convertido en `sessionStorage`.
-4. Leer el dato desde `sessionStorage`.
-5. Mostrar en consola el dato leído.
-6. Convertir el dato leído a objeto usando `JSON.parse`.
-7. Mostrar en consola el tema guardado.
-8. Cambiar el idioma del objeto parseado.
-9. Guardar nuevamente el objeto actualizado en `sessionStorage`.
-10. Borrar el dato usando `removeItem`.
+2. Usar `reduce` para obtener el producto total de un array de números.
 
-## Funciones para guardar datos
+3. Dado un array de precios, usar `reduce` para calcular el total de la compra.
 
-1. Crear una función llamada `guardarEnLocalStorage` que reciba `clave` y `valor`.
-2. Dentro de la función, guardar el valor en `localStorage` usando `setItem`.
-3. Ejecutar la función guardando un mensaje simple.
-4. Crear un objeto llamado `mascota`.
-5. Convertir la mascota a texto usando `JSON.stringify`.
-6. Guardar la mascota usando la función `guardarEnLocalStorage`.
-7. Leer la mascota desde `localStorage`.
-8. Convertir la mascota leída a objeto usando `JSON.parse`.
-9. Mostrar en consola el nombre de la mascota.
-10. Borrar la mascota guardada.
+4. Dado un array de cursos, crear un objeto donde cada clave sea el nombre del curso y cada valor sea su precio.
 
-## Mini práctica integradora
+5. Dado el siguiente array de frutas, crear un objeto que cuente cuántas veces aparece cada fruta:
 
-1. Crear una clase llamada `Tarea` con `titulo`, `descripcion` y `completada`.
-2. Crear tres tareas usando `new Tarea(...)`.
-3. Guardar las tareas en un array llamado `listaDeTareas`.
-4. Mostrar en consola la lista completa.
-5. Cambiar la propiedad `completada` de la primera tarea a `true`.
-6. Mostrar en consola solamente las tareas pendientes.
-7. Convertir `listaDeTareas` a texto usando `JSON.stringify`.
-8. Guardar la lista en `localStorage`.
-9. Leer la lista desde `localStorage`.
-10. Convertir la lista leída a array usando `JSON.parse`.
+   ```js
+   const frutas = [
+       "Banana",
+       "Banana",
+       "Pera",
+       "Manzana",
+       "Limon",
+       "Pera",
+       "Manzana",
+       "Pera",
+   ];
+   ```
 
----
+6. Dado un array de productos, calcular la suma de los precios de todos los productos disponibles.
 
-## [Autor: Alejandro Di Stefano](https://github.com/Drako01)
+## `find`
+
+1. Dado un array de números, encontrar el primer número mayor a `50`.
+
+2. Dado un array de productos, encontrar el producto con `id` igual a `3`.
+
+3. Dado un array de productos, encontrar el producto cuyo nombre sea `"Pepsi"`. La búsqueda debe funcionar
+   aunque el texto esté escrito en mayúsculas o minúsculas.
+
+4. Dado un array de productos, encontrar el primer producto disponible.
+
+5. Dado un array de cursos, encontrar el curso llamado `"React"`.
+
+## `some`
+
+1. Dado un array de palabras, verificar si al menos una palabra tiene más de `10` caracteres.
+
+2. Dado un array de productos, verificar si existe un producto llamado `"Pepsi"`.
+
+3. Dado un array de productos, verificar si hay al menos un producto disponible.
+
+4. Dado un array de cursos, verificar si existe algún curso con precio mayor a `300000`.
+
+5. Dado un array de números, verificar si existe al menos un número negativo.
+
+## `sort`
+
+1. Ordenar un array de palabras alfabéticamente.
+
+2. Ordenar un array de números de menor a mayor.
+
+3. Ordenar un array de números de mayor a menor.
+
+4. Ordenar un array de cursos por precio de menor a mayor.
+
+5. Ordenar un array de productos por nombre alfabéticamente.
+
+6. Crear una copia de un array de números y ordenar la copia de menor a mayor, sin modificar el array original.
+
+## Integradores
+
+1. Crear un array de productos con las propiedades `id`, `nombre`, `precio` y `disponible`. Luego resolver:
+
+   - Obtener solo los productos disponibles.
+   - Crear un array con los nombres de todos los productos.
+   - Calcular el total de precios de todos los productos.
+   - Encontrar el producto con `id` igual a `4`.
+   - Verificar si existe algún producto llamado `"Chocolate"`.
+   - Ordenar los productos por precio de menor a mayor.
+
+2. Crear un array de cursos con `nombre` y `precio`. Luego resolver:
+
+   - Obtener los cursos económicos, con precio menor o igual a `180000`.
+   - Obtener un array con los nombres de los cursos.
+   - Calcular el total de precios de todos los cursos.
+   - Crear un objeto donde cada curso sea una clave y su precio sea el valor.
+   - Encontrar el curso `"JavaScript"`.
+
+3. Expresar el siguiente script en una sola línea de código usando `reduce`:
+
+   ```js
+   let total = 0;
+
+   for (let i = 1; i <= 10; i++) {
+       total += i;
+   }
+
+   console.log(total);
+   ```
+
+## Práctica extra
+
+Estos ejercicios son para seguir practicando con el mismo nivel de dificultad de la clase.
+
+### Más práctica con funciones como parámetros
+
+1. Crear una función `ejecutarOperacion(numero1, numero2, callback)` y usarla para sumar dos números.
+
+2. Usar la misma función `ejecutarOperacion` para multiplicar dos números.
+
+3. Crear una función `mostrarMensaje(mensaje, callback)` que reciba un texto y una función. El callback debe
+   mostrar el mensaje en consola.
+
+4. Crear una función `procesarPrecio(precio, callback)` y pasarle una función que devuelva el precio con IVA.
+
+5. Crear una función `procesarNombre(nombre, callback)` y pasarle una función que convierta el nombre a
+   mayúsculas.
+
+### Más práctica con arrays simples
+
+1. Crear un array con cinco números y mostrar su largo usando `.length`.
+
+2. Crear un array de palabras, agregar dos palabras nuevas con `push` y mostrar el array completo.
+
+3. Crear un array de nombres y mostrar el primer nombre.
+
+4. Crear un array de cursos y mostrar el último curso usando el índice correspondiente.
+
+5. Crear un array de números y cambiar el primer valor por otro número.
+
+6. Crear un array de frutas y ordenarlo alfabéticamente usando `sort`.
+
+### Más práctica con `forEach`
+
+1. Dado un array de nombres, imprimir un saludo para cada nombre.
+
+2. Dado un array de precios, imprimir cada precio con el texto `"Precio: $"`.
+
+3. Dado un array de cursos, imprimir cada curso junto con su posición.
+
+4. Dado un array de números, imprimir solamente el doble de cada número.
+
+5. Dado un array de productos, imprimir el nombre de cada producto.
+
+6. Dado un array de productos, imprimir un mensaje distinto si el producto está disponible o no.
+
+7. Dado un array de booleanos, imprimir `"Si"` cuando el valor sea `true` y `"No"` cuando sea `false`.
+
+8. Dado un array de números, usar `forEach` para sumar todos los valores en una variable externa.
+
+9. Dado un array de palabras, crear un objeto donde cada clave sea la palabra y cada valor sea su largo.
+
+10. Dado un array de productos, contar cuántos productos tienen precio mayor a `3000`.
+
+### Más práctica con `filter`
+
+1. Dado un array de números, obtener solamente los números menores a `0`.
+
+2. Dado un array de números, obtener solamente los números iguales a `100`.
+
+3. Dado un array de palabras, obtener solamente las palabras que tengan más de `5` letras.
+
+4. Dado un array de palabras, obtener solamente las palabras que empiecen con la letra `"M"`.
+
+5. Dado un array de cursos, obtener solamente los cursos que no sean `"JavaScript"`.
+
+6. Dado un array de productos, obtener solamente los productos con precio menor a `5000`.
+
+7. Dado un array de productos, obtener solamente los productos que no estén disponibles.
+
+8. Dado un array de productos, obtener solamente los productos cuyo nombre tenga más de `5` caracteres.
+
+9. Dado un array de cursos, obtener solamente los cursos cuyo precio esté entre `150000` y `200000`.
+
+10. Dado un array de números, obtener solamente los números distintos de `0`.
+
+### Más práctica con `map`
+
+1. Dado un array de números, crear un nuevo array con cada número multiplicado por `3`.
+
+2. Dado un array de números, crear un nuevo array con cada número convertido a texto.
+
+3. Dado un array de palabras, crear un nuevo array con el texto `"Curso: "` delante de cada palabra.
+
+4. Dado un array de nombres, crear un nuevo array con todos los nombres en minúsculas.
+
+5. Dado un array de precios, crear un nuevo array con todos los precios con un descuento del 10%.
+
+6. Dado un array de productos, crear un nuevo array con solamente los nombres en mayúsculas.
+
+7. Dado un array de productos, crear un nuevo array de objetos con `nombre` y `precioFinal`.
+
+8. Dado un array de cursos, crear un nuevo array de textos con el formato `"JavaScript cuesta $180000"`.
+
+9. Dado un array de booleanos, crear un nuevo array con `"Disponible"` o `"No disponible"`.
+
+10. Dado un array de números, crear un nuevo array con objetos que tengan la propiedad `valor`.
+
+### Más práctica con `reduce`
+
+1. Dado un array de números, obtener la suma total empezando desde `0`.
+
+2. Dado un array de números, obtener la suma total empezando desde `100`.
+
+3. Dado un array de precios, obtener el total y guardarlo en una variable llamada `total`.
+
+4. Dado un array de productos, calcular el total de todos los precios.
+
+5. Dado un array de productos, calcular el total de precios solo de los productos disponibles.
+
+6. Dado un array de cursos, crear un objeto donde la clave sea el nombre y el valor sea el objeto completo.
+
+7. Dado un array de palabras, crear un objeto que guarde cuántas letras tiene cada palabra.
+
+8. Dado un array de números, contar cuántos números son positivos usando `reduce`.
+
+9. Dado un array de productos, crear un array nuevo con los nombres usando `reduce`.
+
+10. Dado un array de cursos, sumar todos los precios y calcular el promedio.
+
+### Más práctica con `find`
+
+1. Dado un array de números, encontrar el primer número negativo.
+
+2. Dado un array de números, encontrar el primer número igual a `100`.
+
+3. Dado un array de palabras, encontrar la primera palabra que tenga más de `7` letras.
+
+4. Dado un array de productos, encontrar el producto llamado `"Yerba"`.
+
+5. Dado un array de productos, encontrar el producto con precio mayor a `10000`.
+
+6. Dado un array de productos, encontrar el primer producto que no esté disponible.
+
+7. Dado un array de cursos, encontrar el primer curso que cueste menos de `150000`.
+
+8. Dado un array de cursos, encontrar el curso con precio igual a `360000`.
+
+9. Dado un array de productos, encontrar el producto cuyo nombre sea `"coca cola"` usando `toLowerCase`.
+
+10. Dado un array de booleanos, encontrar el primer valor `false`.
+
+### Más práctica con `some`
+
+1. Dado un array de números, verificar si existe algún número mayor a `1000`.
+
+2. Dado un array de números, verificar si existe algún número igual a `0`.
+
+3. Dado un array de palabras, verificar si existe alguna palabra que empiece con `"C"`.
+
+4. Dado un array de palabras, verificar si existe alguna palabra con menos de `4` letras.
+
+5. Dado un array de productos, verificar si existe algún producto con precio mayor a `10000`.
+
+6. Dado un array de productos, verificar si existe algún producto sin stock.
+
+7. Dado un array de cursos, verificar si existe un curso llamado `"Backend"`.
+
+8. Dado un array de cursos, verificar si existe algún curso con precio menor a `100000`.
+
+9. Dado un array de booleanos, verificar si existe al menos un valor `true`.
+
+10. Dado un array de booleanos, verificar si existe al menos un valor `false`.
+
+### Más práctica con `sort`
+
+1. Ordenar un array de números de menor a mayor y mostrarlo por consola.
+
+2. Ordenar un array de números de mayor a menor y mostrarlo por consola.
+
+3. Ordenar un array de palabras alfabéticamente.
+
+4. Ordenar un array de palabras alfabéticamente sin modificar el array original.
+
+5. Ordenar un array de productos por precio de mayor a menor.
+
+6. Ordenar un array de productos por `id` de menor a mayor.
+
+7. Ordenar un array de cursos por precio de mayor a menor.
+
+8. Ordenar un array de cursos por nombre usando `localeCompare`.
+
+9. Crear una copia de un array de productos y ordenar la copia por nombre.
+
+10. Crear una copia de un array de números y ordenar la copia de mayor a menor.
+
+### Integradores extra
+
+1. Crear un array de productos y resolver:
+
+   - Mostrar el nombre de cada producto con `forEach`.
+   - Obtener los productos disponibles con `filter`.
+   - Crear un array de nombres con `map`.
+   - Calcular el total de precios con `reduce`.
+   - Buscar el producto `"Pepsi"` con `find`.
+   - Verificar si existe algún producto caro con `some`.
+   - Ordenar una copia por precio con `sort`.
+
+2. Crear un array de cursos y resolver:
+
+   - Mostrar cada curso con su precio.
+   - Obtener los cursos que cuestan menos de `200000`.
+   - Crear un array con los nombres de los cursos.
+   - Calcular el promedio de precios.
+   - Buscar el curso `"SQL"`.
+   - Verificar si existe algún curso de más de `300000`.
+   - Ordenar una copia por nombre.
+
+3. Crear un array de frutas repetidas y resolver:
+
+   - Mostrar cada fruta.
+   - Obtener las frutas que tengan más de `5` letras.
+   - Crear un array con todas las frutas en mayúsculas.
+   - Contar cuántas veces aparece cada fruta usando `reduce`.
+   - Buscar la primera fruta que empiece con `"P"`.
+   - Verificar si existe la fruta `"Kiwi"`.
+   - Ordenar una copia alfabéticamente.
+
+## Autor
+
+[Alejandro Di Stefano](https://github.com/Drako01)
